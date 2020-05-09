@@ -26,6 +26,7 @@
     <DefineConstants>NETFRAMEWORK</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PowerShellGraphSDK.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -123,8 +124,8 @@
     <None Include="CustomModules\UtilCmdlets.psm1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PowerShellGraphSDK.psd1" />
-    <None Include="Scripts\Build.cmd" />
+    <None Include="Scripts\azure-pipelines.yml" />
+    <None Include="Scripts\Build.ps1" />
     <None Include="Scripts\generateModuleManifest.ps1" />
     <None Include="Scripts\ListCmdlets.ps1" />
   </ItemGroup>

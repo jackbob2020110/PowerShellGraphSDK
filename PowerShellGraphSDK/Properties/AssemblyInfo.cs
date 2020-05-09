@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PowerShellGraphSDK")]
 [assembly: AssemblyDescription("this API is used to Call Microsoft Graph as Powershell")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("21v BC")]
+[assembly: AssemblyCompany("BC")]
 [assembly: AssemblyProduct("PowerShellGraphSDK")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

@@ -115,16 +115,16 @@ $generateManifestArgs = @{
     GUID = [guid]::NewGuid()
 
     # Author of this module
-    Author = '21v BC Corporation'
+    Author = 'BC Corporation'
 
     # Company or vendor of this module
-    CompanyName = '21v BC Corporation'
+    CompanyName = 'BC Corporation'
 
     # Copyright statement for this module
-    Copyright = '(c) 2020 21v BC. All rights reserved.'
+    Copyright = '(c) 2020 BC. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description = 'PowerShell SDK for 21v BC Intune Graph API'
+    Description = 'PowerShell SDK for BC MSGraph API'
 
     # Minimum version of the Windows PowerShell engine required by this module
     # PowerShellVersion = ''
