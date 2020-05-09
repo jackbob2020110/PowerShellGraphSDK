@@ -1,9 +1,5 @@
 # PowerShellGraphSDK
 
-## Microsoft Graph PowerShell SDK
-
-
-
 本项目在Microsoft Intune-PowerShell SDK的基础 上，移除了Intune的SDK，针对国内版的Microsoft Graph API进行开发，提供一系列调用Microsoft Graph的PowerShell cmdlets。
 
 
