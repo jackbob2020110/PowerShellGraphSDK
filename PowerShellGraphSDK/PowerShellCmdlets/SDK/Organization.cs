@@ -8,7 +8,7 @@ using System.Management.Automation;
 namespace BC.PowerShellGraphSDK.PowerShellCmdlets
 {
     /// <summary>
-    /// 
+    ///  获取组织信息
     /// </summary>
     [Cmdlet("Get", "Organization", DefaultParameterSetName = @"Search")]
     [ODataType("microsoft.graph.organization")]
@@ -29,4 +29,6 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
             return $"organization/{organizationId ?? string.Empty}";
         }
     }
+
+ 
 }
