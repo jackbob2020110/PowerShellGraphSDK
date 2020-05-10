@@ -111,7 +111,9 @@
     <Compile Include="PowerShellCmdlets\PostOrPatchCmdlet.cs" />
     <Compile Include="PowerShellCmdlets\PostReferenceToCollectionCmdlet.cs" />
     <Compile Include="PowerShellCmdlets\PutReferenceToEntityCmdlet.cs" />
+    <Compile Include="PowerShellCmdlets\SDK\Groups.cs" />
     <Compile Include="PowerShellCmdlets\SDK\Organization.cs" />
+    <Compile Include="PowerShellCmdlets\SDK\Users.cs" />
     <Compile Include="PowerShellCmdlets\UpdateStreamCmdlet.cs" />
     <Compile Include="PowerShellCmdlets\Utils\ModuleInitializer.cs" />
     <Compile Include="PowerShellCmdlets\Utils\UtilCmdlets.cs" />
