@@ -27,11 +27,12 @@ steps:
     InsertAttributes: true
     FileEncoding: 'auto'
     WriteBOM: false
-    VersionNumber: '$(Build.BuildNumber)'
-    FileVersionNumber: '$(Build.BuildNumber)'
+    VersionNumber: '$(BuildNumber1)'
+    FileVersionNumber: '$(BuildNumber1)'
     LogLevel: 'verbose'
     FailOnWarning: false
     DisableTelemetry: false
+
 
 - task: NuGetCommand@2
   inputs:
