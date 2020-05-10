@@ -2,6 +2,7 @@
 
 本项目在Microsoft Intune-PowerShell SDK的基础 上，移除了Intune的SDK，针对国内版的Microsoft Graph API进行开发，提供一系列调用Microsoft Graph的PowerShell cmdlets。
 
+## 编译版本
 [![Build Status](https://dev.azure.com/asunp/PowershellMSGraphSDK/_apis/build/status/PowershellMSGraphSDK-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/asunp/PowershellMSGraphSDK/_build/latest?definitionId=12&branchName=master)
 
 ## 安装指南
