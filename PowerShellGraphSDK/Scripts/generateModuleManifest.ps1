@@ -32,7 +32,7 @@ try {
     # Create a single list of all modules
     $modulePaths = @()
     $modulePaths += $mainModulePath
-    $nestedModules = Get-ChildItem -Include '*.psm1', '*.ps1' -Recurse -File | Resolve-Path -Relative
+    $nestedModules = Get-ChildItem -Include '*.psm1', '*.ps1' -Exclude "Build.ps1" -Recurse -File | Resolve-Path -Relative
     if ($nestedModules) {
         $modulePaths += $nestedModules
     }

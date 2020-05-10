@@ -7,7 +7,9 @@ using System.Management.Automation;
 
 namespace BC.PowerShellGraphSDK.PowerShellCmdlets
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
     [Cmdlet("Get", "Organization", DefaultParameterSetName = @"Search")]
     [ODataType("microsoft.graph.organization")]
     [ResourceTypePropertyName("organizationODataType")]
