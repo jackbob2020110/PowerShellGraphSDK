@@ -9,7 +9,7 @@ using System.Management.Automation;
 namespace BC.PowerShellGraphSDK.PowerShellCmdlets
 {
     /// <summary>
-    /// 
+    /// 获取用户
     /// </summary>
     [Cmdlet("Get", "Users", DefaultParameterSetName = @"Search")]
     public class Get_Users : GetOrSearchCmdlet
