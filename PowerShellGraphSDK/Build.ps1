@@ -13,7 +13,7 @@
 # 3. Verify all existing Pester tests pass.
 # 4. Publish the module to the desired repository (defaulting to the PSGallery).
 #
-# Requirements: PSake.  If you don't have this module installed use the following
+# Requirements: PSake  If you don't have this module installed use the following
 # command to install it:
 #
 # PS C:\> Install-Module PSake -Scope CurrentUser
