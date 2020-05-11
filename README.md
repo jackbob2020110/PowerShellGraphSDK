@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/asunp/PowershellMSGraphSDK/_apis/build/status/PowershellMSGraphSDK-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/asunp/PowershellMSGraphSDK/_build/latest?definitionId=12&branchName=master)
+[![Build Status](https://dev.azure.com/asunp/PowershellMSGraphSDK/_apis/build/status/PowershellMSGraphSDK-master-CI?branchName=master)](https://dev.azure.com/asunp/PowershellMSGraphSDK/_build/latest?definitionId=12&branchName=master)
 
 # PowerShellGraphSDK
 
