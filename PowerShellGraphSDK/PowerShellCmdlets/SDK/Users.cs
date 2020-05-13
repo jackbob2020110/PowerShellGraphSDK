@@ -26,5 +26,10 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         {
             return $"users/{UserId ?? string.Empty}";
         }
+
+        internal override string GetSchemaVersion()
+        {
+            return this.SchemaVersion;
+        }
     }
 }
