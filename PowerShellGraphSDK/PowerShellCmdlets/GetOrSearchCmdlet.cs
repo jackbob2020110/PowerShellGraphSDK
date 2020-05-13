@@ -75,6 +75,15 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Parameter(ParameterSetName = GetOrSearchCmdlet.OperationName)]
         public int? MaxPageSize { get; set; }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Parameter(Mandatory = false)]
+        [ValidateNotNull]
+        [ValidateSet("v1.0", "Beta")]
+        public string SchemaVersion { get; set; } = "v1.0";
+
         /// <summary>
         /// Creates a new <see cref="GetOrSearchCmdlet"/>.
         /// </summary>
