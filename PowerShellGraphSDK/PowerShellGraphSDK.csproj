@@ -146,7 +146,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>powershell.exe -NonInteractive -ExecutionPolicy Unrestricted -Command "&amp; { $(ProjectDir)Scripts\generateModuleManifest.ps1 -ModuleName $(TargetName)  -OutputDirectory $(TargetDir) -MainModuleRelativePath $(TargetFileName)}"
-powershell.exe -NonInteractive -ExecutionPolicy Unrestricted -Command "&amp; { $(ProjectDir)Scripts\ListCmdlets.ps1 -ModuleName $(TargetName)  -OutputDirectory $(TargetDir)}"
 </PostBuildEvent>
   </PropertyGroup>
 </Project>
