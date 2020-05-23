@@ -112,6 +112,7 @@
     <Compile Include="PowerShellCmdlets\PostReferenceToCollectionCmdlet.cs" />
     <Compile Include="PowerShellCmdlets\PutReferenceToEntityCmdlet.cs" />
     <Compile Include="PowerShellCmdlets\SDK\Groups.cs" />
+    <Compile Include="PowerShellCmdlets\SDK\Licenses.cs" />
     <Compile Include="PowerShellCmdlets\SDK\Organization.cs" />
     <Compile Include="PowerShellCmdlets\SDK\Users.cs" />
     <Compile Include="PowerShellCmdlets\UpdateStreamCmdlet.cs" />

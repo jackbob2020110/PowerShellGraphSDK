@@ -92,7 +92,7 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;visibility&quot; property, of type &quot;Edm.String&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.user&quot; type.</para>
         /// </summary>
-        [ODataType("graph.passwordProfile")]
+        [ODataType("microsoft.graph.passwordProfile")]
         [Selectable]
         [Parameter(ParameterSetName = @"microsoft.graph.user", ValueFromPipelineByPropertyName = true, HelpMessage = @"The &quot;visibility&quot; property, of type &quot;Edm.String&quot;.")]
         [Parameter(ParameterSetName = @"ManualTypeSelection", ValueFromPipelineByPropertyName = true, HelpMessage = @"The &quot;visibility&quot; property, of type &quot;Edm.String&quot;.")]
