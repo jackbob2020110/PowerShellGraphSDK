@@ -31,11 +31,11 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         /// </summary>
         private const string OrderByDescPostfix = "desc";
 
-        /// <summary>
-        /// <para type="description">The "$filter" query option value.</para>
-        /// </summary>
-        [Parameter(ParameterSetName = GetOrSearchCmdlet.OperationName)]
-        public string Select { get; set; }
+        ///// <summary>
+        ///// <para type="description">The "$filter" query option value.</para>
+        ///// </summary>
+        //[Parameter(ParameterSetName = GetOrSearchCmdlet.OperationName)]
+        //public string Select { get; set; }
 
         /// <summary>
         /// <para type="description">The "$filter" query option value.</para>
@@ -166,11 +166,11 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
                 queryOptions.Add(ODataConstants.QueryParameters.OrderBy, string.Join(",", sortable));
             }
 
-            // Select
-            if (!string.IsNullOrEmpty(this.Select))
-            {
-                queryOptions.Add(ODataConstants.QueryParameters.Select, this.Select);
-            }
+            //// Select
+            //if (!string.IsNullOrEmpty(this.Select))
+            //{
+            //    queryOptions.Add(ODataConstants.QueryParameters.Select, this.Select);
+            //}
 
             // Filter
             if (!string.IsNullOrEmpty(this.Filter))
