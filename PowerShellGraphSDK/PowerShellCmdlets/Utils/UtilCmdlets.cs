@@ -8,6 +8,9 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
     using System.Net.Http;
     using System.Net.Http.Headers;
     using System.Linq;
+    using System.Reflection;
+    using System.Diagnostics;
+    using System;
 
     /// <summary>
     /// <para type="description">Authenticates with Graph.</para>
@@ -113,6 +116,45 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Parameter]
         public SwitchParameter PassThru { get; set; }
 
+        [Parameter(Mandatory = false)]
+        public LogLevel LogLevel
+        {
+            get;
+            set;
+        }
+
+        [Parameter(Mandatory = false)]
+        public string LogFilePath
+        {
+            get;
+            set;
+        }
+
+        protected override void BeginProcessing()
+        {
+            base.BeginProcessing();
+            try
+            {
+                Logger.Initialize(LogLevel, LogFilePath);
+                LogAssemblyInfo();
+                Logger.WriteInfo("Conect-MSGraph", "BeginProcessing", "Connecting to the de environment.");
+                //if (!AzureRmProfileProvider.Instance.Profile.Environments.ContainsKey(AzureEnvironmentName))
+                //{
+                //    Logger.WriteError(new CallerInformation("BeginProcessing", "X:\\bt\\1005247\\repo\\src\\dev\\PowerShell.V2\\CommonLibrary\\ConnectAzureAD.cs", 92), Messages.UnknownEnvironment, AzureEnvironmentName);
+                //    throw new PSInvalidOperationException(string.Format(Messages.UnknownEnvironment, AzureEnvironmentName));
+                //}
+                //AzureEnvironment = AzureRmProfileProvider.Instance.Profile.Environments[AzureEnvironmentName];
+                //AzureSession.NewSessionstate();
+                //AzureSession.AzureEnvironment = AzureEnvironment;
+            }
+            catch (Exception exception)
+            {
+                Logger.WriteError(exception, "BeginProcessing", "Connect-MSGraph");
+                throw;
+            }
+        }
+
+
         /// <summary>
         /// Run the cmdlet.
         /// </summary>
@@ -176,6 +218,19 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
                     this.WriteObject(authResult.PSUserDisplayableInformation);
                 }
             }
+        }
+
+
+        private void LogAssemblyInfo()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            string assemblyVersion = assembly.GetName().Version.ToString();
+            string fileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
+            string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
+            _ = assembly.FullName;
+            string assemblyLocation = assembly.Location;
+            string assemblyInfo = assembly.ToString();
+            Logger.WriteInfo("LogAssemblyInfo", $"Running assembly \t assemblyInfo : {assemblyInfo} \t assemblyLocation : {assemblyLocation} \t assemblyName : {assembly.FullName}" + $"\t assemblyVersion : {assemblyVersion} \t fileVersion : {fileVersion} \t productVersion : {productVersion}");
         }
     }
 

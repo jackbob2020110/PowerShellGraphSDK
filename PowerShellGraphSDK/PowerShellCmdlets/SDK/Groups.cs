@@ -233,12 +233,13 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Sortable]
         public System.Int32 unseenCount { get; set; }
 
-        
+
         /// <summary>
         ///     <para type="description">The &quot;members&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        // [ODataType("microsoft.graph.directoryObject", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] members { get; set; }
@@ -247,7 +248,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;memberOf&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] memberOf { get; set; }
@@ -256,7 +258,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;membersWithLicenseErrors&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] membersWithLicenseErrors { get; set; }
@@ -265,7 +268,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;transitiveMembers&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] transitiveMembers { get; set; }
@@ -274,7 +278,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;transitiveMemberOf&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] transitiveMemberOf { get; set; }
@@ -283,7 +288,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;createdOnBehalfOf&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         [Sortable]
@@ -293,7 +299,8 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         ///     <para type="description">The &quot;owners&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
         /// </summary>
-        [ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        //[ODataType("microsoft.graph.directoryObject", "microsoft.graph.administrativeUnit", "microsoft.graph.groupSettingTemplate", "microsoft.graph.user", "microsoft.graph.organization", "microsoft.graph.contract", "microsoft.graph.group", "microsoft.graph.directoryRoleTemplate", "microsoft.graph.directoryRole", "microsoft.graph.directoryObjectPartnerReference", "microsoft.graph.device")]
+        [ODataType("microsoft.graph.directoryObject")]
         [Selectable]
         [Expandable]
         public System.Object[] owners { get; set; }
@@ -335,6 +342,29 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Selectable]
         [Sortable]
         public System.DateTimeOffset deletedDateTime { get; set; }
+
+        /// <summary>
+        /// <para type="description">The "$search" query option value.</para>
+        /// </summary>
+        [Parameter(ParameterSetName = GetOrSearchCmdlet.OperationName)]
+        public string SearchString { get; set; }
+
+        internal override IDictionary<string, string> GetUrlQueryOptions()
+        {
+            IDictionary<string, string> queryOptions = base.GetUrlQueryOptions();
+
+
+            // Search
+            if (!string.IsNullOrEmpty(this.SearchString))
+            {
+                string sb = $"mailNickName eq '{SearchString}' or(mail eq '{SearchString}' or(displayName eq '{SearchString}' or startswith(displayName, '{SearchString}')))";
+
+                queryOptions.Add("$filter", sb);
+            }
+
+
+            return queryOptions;
+        }
 
         internal override System.String GetResourcePath()
         {
@@ -565,11 +595,39 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;autoSubscribeNewMembers&quot; property, of type &quot;Edm.Boolean&quot;.")]
         public System.Boolean autoSubscribeNewMembers { get; set; }
 
-        
+
         internal override System.String GetResourcePath()
         {
             return $"groups/{groupId}";
         }
     }
 
+
+    /// <summary>
+    ///     <para type="synopsis">Removes a &quot;microsoft.graph.group&quot; object.</para>
+    ///     <para type="description">Removes a &quot;microsoft.graph.group&quot; object from the &quot;groups&quot; collection.</para>
+    ///     <para type="description">Graph Call: DELETE ~/groups/groupId</para>
+    /// </summary>
+    [Cmdlet("Remove", "Groups", ConfirmImpact = ConfirmImpact.High)]
+    [ODataType("microsoft.graph.group")]
+    [ResourceTypePropertyName("groupODataType")]
+    [Alias("Remove-AADGroup")]
+    public class Remove_Groups : DeleteCmdlet
+    {
+        /// <summary>
+        ///     <para type="description">The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.</para>
+        /// </summary>
+        [Selectable]
+        [Expandable]
+        [IdParameter]
+        [ResourceIdParameter]
+        [ValidateNotNullOrEmpty]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, HelpMessage = @"The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.")]
+        public System.String groupId { get; set; }
+
+        internal override System.String GetResourcePath()
+        {
+            return $"groups/{groupId}";
+        }
+    }
 }

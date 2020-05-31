@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PowerShellGraphSDK")]
+[assembly: AssemblyTitle("MSGraphSDKPowershell")]
 [assembly: AssemblyDescription("this API is used to Call Microsoft Graph as Powershell")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BC")]
-[assembly: AssemblyProduct("PowerShellGraphSDK")]
+[assembly: AssemblyProduct("MSGraphSDKPowershell")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
