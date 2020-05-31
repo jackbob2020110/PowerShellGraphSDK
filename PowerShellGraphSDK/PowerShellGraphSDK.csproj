@@ -83,10 +83,10 @@
     <Compile Include="Common\Exceptions\AuthException.cs" />
     <Compile Include="Common\Exceptions\MsiAuthException.cs" />
     <Compile Include="Common\Exceptions\PSGraphSDKException.cs" />
-    <Compile Include="Common\Log\CallerInformation.cs" />
-    <Compile Include="Common\Log\Logger.cs" />
-    <Compile Include="Common\Log\LoginType.cs" />
-    <Compile Include="Common\Log\LogLevel.cs" />
+    <Compile Include="Common\Logger\CallerInformation.cs" />
+    <Compile Include="Common\Logger\Logger.cs" />
+    <Compile Include="Common\Logger\LoginType.cs" />
+    <Compile Include="Common\Logger\LogLevel.cs" />
     <Compile Include="Common\PSAuthenticationError.cs" />
     <Compile Include="Common\Utils\AuthUtils.cs" />
     <Compile Include="Common\Utils\AuthUtils_NetFramework.cs" />
