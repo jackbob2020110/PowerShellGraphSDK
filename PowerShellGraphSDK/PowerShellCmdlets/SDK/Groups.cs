@@ -9,15 +9,14 @@ using System.Management.Automation;
 namespace BC.PowerShellGraphSDK.PowerShellCmdlets
 {
     /// <summary>
-    /// 
+    /// 获取组信息
     /// </summary>
     [Cmdlet("Get", "Groups", DefaultParameterSetName = @"Search")]
-    [Alias("Get-AADGroup")]
+    [ODataType("microsoft.graph.group")]
+    [ResourceTypePropertyName("groupODataType")]
+    //[Alias("Get-AADGroup")]
     public class Get_Groups : GetOrSearchCmdlet
     {
-        /// <summary>
-        ///     <para type="description">The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.</para>
-        /// </summary>
         [Selectable]
         [Expandable]
         [IdParameter]
@@ -26,10 +25,6 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Parameter(ParameterSetName = @"Get", Mandatory = true, ValueFromPipelineByPropertyName = true, HelpMessage = @"The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.")]
         public System.String groupId { get; set; }
 
-        /// <summary>
-        ///     <para type="description">The &quot;assignedLicenses&quot; property, of type &quot;microsoft.graph.assignedLicense&quot;.</para>
-        ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
-        /// </summary>
         [ODataType("microsoft.graph.assignedLicense")]
         [Selectable]
         public System.Object[] assignedLicenses { get; set; }
@@ -238,15 +233,7 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Sortable]
         public System.Int32 unseenCount { get; set; }
 
-        /// <summary>
-        ///     <para type="description">The &quot;isArchived&quot; property, of type &quot;Edm.Boolean&quot;.</para>
-        ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
-        /// </summary>
-        [ODataType("Edm.Boolean")]
-        [Selectable]
-        [Sortable]
-        public System.Boolean isArchived { get; set; }
-
+        
         /// <summary>
         ///     <para type="description">The &quot;members&quot; property, of type &quot;microsoft.graph.directoryObject&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
@@ -339,15 +326,7 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [Expandable]
         public System.Object[] photos { get; set; }
 
-        /// <summary>
-        ///     <para type="description">The &quot;groupLifecyclePolicies&quot; property, of type &quot;microsoft.graph.groupLifecyclePolicy&quot;.</para>
-        ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
-        /// </summary>
-        [ODataType("microsoft.graph.groupLifecyclePolicy")]
-        [Selectable]
-        [Expandable]
-        public System.Object[] groupLifecyclePolicies { get; set; }
-
+       
         /// <summary>
         ///     <para type="description">The &quot;deletedDateTime&quot; property, of type &quot;Edm.DateTimeOffset&quot;.</para>
         ///     <para type="description">This property is on the &quot;microsoft.graph.group&quot; type.</para>
@@ -363,10 +342,13 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         }
     }
 
+    /// <summary>
+    /// 创建组
+    /// </summary>
     [Cmdlet("New", "Groups", ConfirmImpact = ConfirmImpact.Low, DefaultParameterSetName = @"microsoft.graph.group")]
     [ODataType("microsoft.graph.group")]
     [ResourceTypePropertyName("groupODataType")]
-    [Alias("New-AADGroup")]
+    //[Alias("New-AADGroup")]
     public class New_Groups : PostCmdlet
     {
         /// <summary>
@@ -378,9 +360,6 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
         [ResourceIdParameter]
         public System.String groupId { get; set; }
 
-       
-       
-       
         /// <summary>
         ///     <para type="description">The &quot;description&quot; property, of type &quot;Edm.String&quot;.</para>
         ///     <para type="description">描述.</para>
@@ -482,4 +461,115 @@ namespace BC.PowerShellGraphSDK.PowerShellCmdlets
             return $"groups/{groupId}";
         }
     }
+
+    /// <summary>
+    ///     <para type="synopsis">更新组</para>
+    ///     <para type="description">更新组</para>
+    ///     <para type="description">Graph Call: PATCH ~/groups</para>
+    /// </summary>
+    [Cmdlet("Update", "Groups", ConfirmImpact = ConfirmImpact.Medium, DefaultParameterSetName = @"microsoft.graph.group")]
+    [ODataType("microsoft.graph.group")]
+    [ResourceTypePropertyName("groupODataType")]
+    [Alias("Update-AADGroup")]
+    public class Update_Groups : PatchCmdlet
+    {
+        /// <summary>
+        ///     <para type="description">The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.</para>
+        /// </summary>
+        [Selectable]
+        [Expandable]
+        [IdParameter]
+        [ResourceIdParameter]
+        [ValidateNotNullOrEmpty]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, HelpMessage = @"The ID for a &quot;microsoft.graph.group&quot; object in the &quot;groups&quot; collection.")]
+        public System.String groupId { get; set; }
+
+
+        /// <summary>
+        /// 组的描述信息
+        /// </summary>
+        [ODataType("Edm.String")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;description&quot; property, of type &quot;Edm.String&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;description&quot; property, of type &quot;Edm.String&quot;.")]
+        public System.String description { get; set; }
+
+        /// <summary>
+        /// 组的显示名称
+        /// </summary>
+        [ODataType("Edm.String")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;displayName&quot; property, of type &quot;Edm.String&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;displayName&quot; property, of type &quot;Edm.String&quot;.")]
+        public System.String displayName { get; set; }
+
+        /// <summary>
+        /// 组的类型，Unified为Office365组，DynamicMembership
+        /// </summary>
+        [ODataType("Edm.String")]
+        [Selectable]
+        [AllowEmptyCollection]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;groupTypes&quot; property, of type &quot;Edm.String&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;groupTypes&quot; property, of type &quot;Edm.String&quot;.")]
+        public System.String[] groupTypes { get; set; }
+
+        /// <summary>
+        /// 组是否启用mail
+        /// </summary>
+        [ODataType("Edm.Boolean")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;mailEnabled&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;mailEnabled&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        public System.Boolean mailEnabled { get; set; }
+
+        /// <summary>
+        /// 组的别名
+        /// </summary>
+        [ODataType("Edm.String")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;mailNickname&quot; property, of type &quot;Edm.String&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;mailNickname&quot; property, of type &quot;Edm.String&quot;.")]
+        public System.String mailNickname { get; set; }
+
+        
+        /// <summary>
+        /// 是否为安全组
+        /// </summary>
+        [ODataType("Edm.Boolean")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;securityEnabled&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;securityEnabled&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        public System.Boolean securityEnabled { get; set; }
+
+        /// <summary>
+        /// 是否可见：public/private
+        /// </summary>
+        [ODataType("Edm.String")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;visibility&quot; property, of type &quot;Edm.String&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;visibility&quot; property, of type &quot;Edm.String&quot;.")]
+        public System.String visibility { get; set; }
+
+        /// <summary>
+        /// 允许外部
+        /// </summary>
+        [ODataType("Edm.Boolean")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;allowExternalSenders&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;allowExternalSenders&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        public System.Boolean allowExternalSenders { get; set; }
+
+        [ODataType("Edm.Boolean")]
+        [Selectable]
+        [Parameter(ParameterSetName = @"microsoft.graph.group", HelpMessage = @"The &quot;autoSubscribeNewMembers&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        [Parameter(ParameterSetName = @"ManualTypeSelection", HelpMessage = @"The &quot;autoSubscribeNewMembers&quot; property, of type &quot;Edm.Boolean&quot;.")]
+        public System.Boolean autoSubscribeNewMembers { get; set; }
+
+        
+        internal override System.String GetResourcePath()
+        {
+            return $"groups/{groupId}";
+        }
+    }
+
 }
